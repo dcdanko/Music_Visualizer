@@ -70,5 +70,21 @@ class SongSet {
   
   
   void display(){
+    for(i=songs.length-1; i>=0; i--){
+      displayOneSong(songs(i));
+      displayInterSong();
+    }
+  }
+  
+  displayOneSong(Song s){
+    s.display();
+  }
+  
+  displayInterSong(){
+    noStroke();
+    fill(150, 50);
+    rect(0,0,width,height);
+  }
+  
   }
 }
