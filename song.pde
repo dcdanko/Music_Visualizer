@@ -6,18 +6,18 @@
 
 
 class Note {
-  float pitch;
+  int band;
   float time;
   float volume;
  
-   public Note(float p, float t, float v){
+   public Note(int b, float t, float v){
      volume = v;
-     pitch = p;
+     band = b;
      time = t;
    }
    
-   float pitch(){
-     return pitch;
+   float band(){
+     return band;
    }
    
    float time(){
@@ -45,7 +45,7 @@ class Song {
   }
   
   void drawOneNote(Note n){
-    float theta = 45 * log2( log2( n.pitch() / 440));
+    float theta = PI * (n.band() / 255);
     float hyp = n.time();
     float x = width + hyp * cos( theta);
     float y = height - hyp * sin(theta);
