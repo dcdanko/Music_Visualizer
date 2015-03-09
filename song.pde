@@ -30,27 +30,29 @@ class Note {
 }
   
 class Song {
-  Note[] notes;
+  ArrayList<Note> notes = new ArrayList<Note>();
   
   Song(){}
   
   void addNote(Note n){
-    notes = append(notes, n);
+    notes.add(n);
   }
   
   void display(){
-    for(i=0; i< notes.length; i++){
-      drawOneNote( notes[i]);
+    for(int i=0; i< notes.size(); i++){
+      drawOneNote( notes.get(i));
     }
   }
   
   void drawOneNote(Note n){
-    float theta = PI * (n.band() / 255);
-    float hyp = n.time();
-    float x = width + hyp * cos( theta);
-    float y = height - hyp * sin(theta);
-    float rad = n.volume();
-    ellipse(x,y,rad*2,rad*2);
+    if(n.volume() > 2){
+      float theta = PI * (n.band() / 255);
+      float hyp = 2*n.time()+40;
+      float x = (width/2) + hyp * cos( theta);
+      float y = height - hyp * sin(theta);
+      float rad = 0.1 * n.volume();
+      ellipse(x,y,rad*2,rad*2);
+    }
   }
   
 }
@@ -59,32 +61,5 @@ float log2(float x){
   return log(x) / log(2);
 }
 
-class SongSet {
-  Song[] songs;
-  
-  SongSet(){}
-  
-  void addSong(Song s){
-    songs = append(songs, s);
-  }
-  
-  
-  void display(){
-    for(i=songs.length-1; i>=0; i--){
-      displayOneSong(songs(i));
-      displayInterSong();
-    }
-  }
-  
-  displayOneSong(Song s){
-    s.display();
-  }
-  
-  displayInterSong(){
-    noStroke();
-    fill(150, 50);
-    rect(0,0,width,height);
-  }
-  
-  }
-}
+
+
