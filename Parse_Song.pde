@@ -27,6 +27,6 @@ boolean snare = false;
 
 
 
-void parseToSong(Song s, AudioPlayer a){
+void parseToSong(Song s, AudioPlayer a, int t){
   
 }
