@@ -31,8 +31,10 @@ class Note {
   
 class Song {
   ArrayList<Note> notes = new ArrayList<Note>();
-  
-  Song(){}
+  int startedAt;
+  Song(int sA){
+    startedAt = sA;
+  }
   
   void addNote(Note n){
     notes.add(n);
@@ -47,7 +49,7 @@ class Song {
   void drawOneNote(Note n){
     if(n.volume() > 2){
       float theta = PI * (n.band() / 255);
-      float hyp = 2*n.time()+40;
+      float hyp = 8*n.time()+40-startedAt;
       float x = (width/2) + hyp * cos( theta);
       float y = height - hyp * sin(theta);
       float rad = 0.1 * n.volume();

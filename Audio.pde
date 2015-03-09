@@ -1,22 +1,14 @@
-
-
-void setPlayers(){
-  minim = new Minim(this);
-  makeAndStartPlayers();
-  makeSongs();
-}
+int songI = 0;
   
-void makeAndStartPlayers(){
-  for(int i=0; i<songNames.length; i++){
+void startNextSong(){
+  if(songI < songNames.length){
     AudioPlayer a = minim.loadFile(songNames[songI]);
     a.play();
     players.add(a);
+    songs.add(new Song(millis()/1000));
+    songI++;
   }
+  
 }
 
-void makeSongs(){
-  for(int i=0; i<songNames.length; i++){
-    songs.add(new Song());
-  }
-}
   
