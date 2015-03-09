@@ -22,12 +22,25 @@ boolean kick = false;
 boolean hat = false;
 boolean snare = false;
 
+minim = new Minim(this);
+player = minim.loadFile("The Hush Sound - My Apologies.mp3");
+fft = new FFT(player.bufferSize(), player.sampleRate());
+player.play();
+
+for(int i = 0; i < 250; i++) {
+  float b = fft.getBand(i);
+}
 
 
 
-
-
-
-
-Song parseSong(){
+void parseSong(Song song, AudioPlayer player, int time){
+    int n = 0;
+    fft.forward(player.mix);
+    n = fft.specSize();
+  //-------------------
+    for (int i = 0; i < n; i++) {
+        vol = fft.getBand(i);
+        song.addNote(i,time,vol);
+      }
+  
 }
