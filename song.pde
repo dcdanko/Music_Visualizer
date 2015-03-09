@@ -7,10 +7,10 @@
 
 class Note {
   int band;
-  float time;
+  int time;
   float volume;
  
-   public Note(int b, float t, float v){
+   public Note(int b, int t, float v){
      volume = v;
      band = b;
      time = t;
@@ -20,7 +20,7 @@ class Note {
      return band;
    }
    
-   float time(){
+   int time(){
      return time;
    }
    

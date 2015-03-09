@@ -1,12 +1,5 @@
-// --------------------------------------------------------------------- LIBRARIES
-import de.voidplus.soundcloud.*;
-import ddf.minim.spi.*;
-import ddf.minim.signals.*;
-import ddf.minim.*;
-import ddf.minim.analysis.*;
-import ddf.minim.ugens.*;
-import ddf.minim.effects.*;
 
+<<<<<<< HEAD
 SoundCloud soundcloud;
 
 // ---------------------------------------------------- Minim Parameters 
@@ -44,3 +37,5 @@ void parseSong(Song song, AudioPlayer player, int time){
       }
   
 }
+=======
+>>>>>>> 7ba7dcaa71df0ee161775eda7a4fa741fb4fc971
