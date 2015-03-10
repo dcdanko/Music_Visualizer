@@ -21,20 +21,20 @@ String[] songNames = {"1949- HITS ARCHIVE_ Riders In The Sky - Vaughn Monroe (a 
                       "2014-Pharrell Williams - Happy (Official Music Video).mp3"};
 int allAlpha = 7;
 
-color[] cols = {color(137,   16,  116, allAlpha),
-color(90,   0,   141, allAlpha),
-color(29,   0,   102, allAlpha),
-color(22,   6,   143, allAlpha),
-color(2,     15,  188, allAlpha),
-color(8,     96,  205, allAlpha),
-color(79,   165, 254, allAlpha),
-color(2,     190, 192, allAlpha),
-color(0,     210, 133, allAlpha),
-color(0,     210, 10, allAlpha),
-color(119,   229, 0, allAlpha),
-color(182,   241, 3, allAlpha),
-color(236,   251, 0, allAlpha),
-color(255,   255, 0, allAlpha)};
+color[] cols = {color(36,198,200, allAlpha),
+color(39,189,216 , allAlpha),
+color(42,180,211 , allAlpha),
+color(46,171,207 , allAlpha),
+color(49,163,202 , allAlpha),
+color(52,154,198 , allAlpha),
+color(55,145,193 , allAlpha),
+color(58,136,189 , allAlpha),
+color(62,127,184 , allAlpha),
+color(65,118,180 , allAlpha),
+color(68,109,175 , allAlpha),
+color(71,101,171 , allAlpha),
+color(74,92,166 , allAlpha),
+color(78,83,162 , allAlpha)};
                     
 
   void setup(){
